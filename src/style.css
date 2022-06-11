@@ -1,0 +1,91 @@
+body {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+  }
+  
+  i,
+  button {
+    cursor: pointer;
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .to-do-list {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  }
+  
+  .header {
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 1rem;
+  }
+  
+  .newTask,
+  .task {
+    width: 95%;
+    height: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .task {
+    width: 100%;
+  }
+  
+  .newTask input,
+  .task input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+  }
+  
+  #taskList {
+    width: 95%;
+    padding: 0 1rem;
+  }
+  
+  .newTask button {
+    border: none;
+    background: transparent;
+  }
+  
+  .task input {
+    border: none;
+    outline: none;
+  }
+  
+  .clearCompleted {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    padding: 15px;
+  }
+  
+  .fa-trash-can {
+    display: none;
+  }
+  
+  .checkbox-container,
+  .optionAndTrash {
+    display: flex;
+    align-items: center;
+    padding: 0 7px;
+  }
+  
+  .fa-ellipsis-vertical {
+    cursor: all-scroll;
+  }
+  
