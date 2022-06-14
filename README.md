@@ -11,7 +11,7 @@
 
 ## Live Demo:
 
-[https:///desorgui.github.io/To-do-List](https:///desorgui.github.io/To-do-List/)
+[https:///desorgui.github.io/To-do-List](https://desorgui.github.io/To-do-list/)
 
 ## Getting Started
 
