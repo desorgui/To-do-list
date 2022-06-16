@@ -1,10 +1,11 @@
 {
   "name": "to-do-list-mic",
   "version": "1.0.0",
+  "type": "module",
   "description": "��#\u0000 \u0000T\u0000o\u0000-\u0000d\u0000o\u0000-\u0000l\u0000i\u0000s\u0000t\u0000-\u0000M\u0000i\u0000c\u0000\r\u0000 \u0000",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -20,8 +21,10 @@
   },
   "homepage": "https://github.com/desorgui/To-do-list-Mic#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",
