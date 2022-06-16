@@ -49,14 +49,15 @@ describe('the clearCompleted method', () =>{
   tasks.addTask(3, 'Description 3', false);
   tasks.addTask(4, 'Description 4', true);
   tasks.addTask(5, 'Description 5', true);
-  });
-  
+  });  
   it('all tasks shoud be five', () =>{
-    let allTasks = tasks.length();
+    let allTasks = tasks.getTasks().length;
     expect(allTasks).toBe(5);
   });  
   it('completed tasks shoud be three', () => {
-    tasks.foreach(elem => {
+    let completed = 0;
+    let allTasks = tasks.getTasks();
+    allTasks.forEach(elem => {
       if (elem[2] === true) {
         completed += 1;
       }
