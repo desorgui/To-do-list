@@ -1,4 +1,7 @@
-import Tasks from "./taskClass";
+jest.mock('./taskClass.js');
+
+const Tasks = require('./taskClass.js');
+ 
 
 let tasks;
 //test Edit
@@ -43,18 +46,19 @@ describe('the updateStatus method', () => {
 //test all completed task
 describe('the clearCompleted method', () =>{
   beforeEach(() => {
-  tasks = new Tasks();
-  tasks.addTask(1, 'Description 1', false);
-  tasks.addTask(2, 'Description 2', true);
-  tasks.addTask(3, 'Description 3', false);
-  tasks.addTask(4, 'Description 4', true);
-  tasks.addTask(5, 'Description 5', true);
+    tasks = new Tasks();    
+    tasks.addTask(1, 'Description 1', false);
+    tasks.addTask(2, 'Description 2', true);
+    tasks.addTask(3, 'Description 3', false);
+    tasks.addTask(4, 'Description 4', true);
+    tasks.addTask(5, 'Description 5', true);
   });  
-  it('all tasks shoud be five', () =>{
+  it('all tasks should be five', () =>{
     let allTasks = tasks.getTasks().length;
+    console.log(tasks.getTasks());
     expect(allTasks).toBe(5);
   });  
-  it('completed tasks shoud be three', () => {
+  it('completed tasks should be three', () => {
     let completed = 0;
     let allTasks = tasks.getTasks();
     allTasks.forEach(elem => {
