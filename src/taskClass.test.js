@@ -50,8 +50,21 @@ describe('the clearCompleted method', () =>{
   tasks.addTask(4, 'Description 4', true);
   tasks.addTask(5, 'Description 5', true);
   });
+  
+  it('all tasks shoud be five', () =>{
+    let allTasks = tasks.length();
+    expect(allTasks).toBe(5);
+  });  
+  it('completed tasks shoud be three', () => {
+    tasks.foreach(elem => {
+      if (elem[2] === true) {
+        completed += 1;
+      }
+    })
+    expect(completed).toBe(3);
+  });
   it('should be able to remove all completed task', () =>{
     let unComplete = tasks.clearCompleted();
     expect(unComplete.length).toBe(2);
   });  
-});
+});  
