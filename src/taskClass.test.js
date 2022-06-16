@@ -1,17 +1,6 @@
 import Tasks from "./taskClass";
-// Test add
-let tasks;
-describe('the add method', () => {
-  beforeEach(() => {
-    tasks = new Tasks();
-  });
-  it('should be able to createa new task', () => {
-    tasks.addTask(1,'description of task to add', false);
-    let tasklngth = tasks.getTasks().length;
-    expect(tasklngth).toBe(1);
-  });
-});
 
+let tasks;
 //test Edit
 
 describe('the edit method', () => {
@@ -34,11 +23,35 @@ describe('the edit method', () => {
 })
 
 //test Task update function
-
-describe('the update method', () => {
+describe('the updateStatus method', () => {
   beforeEach(() => {
     tasks = new Tasks();
     tasks.addTask(1, 'Description', false);
   });
+  it('should be able to change the completed status', () => {
+    let isCompleted = tasks.getTasks()[0][2];
+    tasks.updateStatus(0, true);
+    expect(isCompleted).not.toBe(true);
+  });
+  it('should be able to see if the completed status is changed to true', () =>{
+  tasks.updateStatus(0, true);  
+  let isCompleted = tasks.getTasks()[0][2];
+  expect(isCompleted).toBe(true);
+  });
+});
 
-})
+//test all completed task
+describe('the clearCompleted method', () =>{
+  beforeEach(() => {
+  tasks = new Tasks();
+  tasks.addTask(1, 'Description 1', false);
+  tasks.addTask(2, 'Description 2', true);
+  tasks.addTask(3, 'Description 3', false);
+  tasks.addTask(4, 'Description 4', true);
+  tasks.addTask(5, 'Description 5', true);
+  });
+  it('should be able to remove all completed task', () =>{
+    let unComplete = tasks.clearCompleted();
+    expect(unComplete.length).toBe(2);
+  });  
+});
