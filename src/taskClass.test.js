@@ -32,3 +32,13 @@ describe('the edit method', () => {
     expect(newValue).toBe(newDescription);
   })
 })
+
+//test Task update function
+
+describe('the update method', () => {
+  beforeEach(() => {
+    tasks = new Tasks();
+    tasks.addTask(1, 'Description', false);
+  });
+
+})
