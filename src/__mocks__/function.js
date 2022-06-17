@@ -11,6 +11,7 @@ const editTask = (TasksList, tasksContainer) => {
     });
   });
 };
+editTask();
 
 const clearCompleted = document.getElementById('clearCompleted');
 const clearCompletedTask = (TasksList, tasksContainer) => {
@@ -19,8 +20,8 @@ const clearCompletedTask = (TasksList, tasksContainer) => {
       TasksList.clearCompleted();
       tasksContainer = TasksList.getTasks();
       localStorage.setItem('tasks', JSON.stringify(tasksContainer));
-      resetIndex(TasksList, tasksContainer);
       window.location.reload();
     }
   });
 };
+clearCompleted();
