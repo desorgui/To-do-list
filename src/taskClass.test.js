@@ -1,6 +1,6 @@
 jest.mock('./taskClass.js');
 
-const Tasks = require('./taskClass.js');
+const Tasks = require('./taskClass');
 
 let tasks;
 // test Edit

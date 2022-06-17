@@ -1,16 +1,16 @@
 const editTask = (TasksList, tasksContainer) => {
-    const inputToEdit = document.querySelectorAll('.taskInput');
-    inputToEdit.forEach((elem, index) => {
-      elem.addEventListener('change', () => {
-        if (elem.value) {
-          TasksList.updateDesc(index, elem.value);
-          tasksContainer = TasksList.getTasks();
-          localStorage.setItem('tasks', JSON.stringify(tasksContainer));
-          window.location.reload();
-        }
-      });
+  const inputToEdit = document.querySelectorAll('.taskInput');
+  inputToEdit.forEach((elem, index) => {
+    elem.addEventListener('change', () => {
+      if (elem.value) {
+        TasksList.updateDesc(index, elem.value);
+        tasksContainer = TasksList.getTasks();
+        localStorage.setItem('tasks', JSON.stringify(tasksContainer));
+        window.location.reload();
+      }
     });
-  };
+  });
+};
 
 const clearCompleted = document.getElementById('clearCompleted');
 const clearCompletedTask = (TasksList, tasksContainer) => {
