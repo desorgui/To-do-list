@@ -51,13 +51,11 @@ describe('the clearCompleted method', () => {
     tasks.addTask(3, 'Description 3', false);
     tasks.addTask(4, 'Description 4', true);
     tasks.addTask(5, 'Description 5', true);
-
-  });  
-  it('all tasks should be five', () =>{
-    let allTasks = tasks.getTasks().length;
-    console.log(tasks.getTasks());
+  });
+  it('all tasks should be five', () => {
+    const allTasks = tasks.getTasks().length;
     expect(allTasks).toBe(5);
-  });  
+  });
   it('completed tasks should be three', () => {
   });
   it('all tasks shoud be five', () => {
