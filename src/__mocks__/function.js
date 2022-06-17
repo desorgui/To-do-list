@@ -24,4 +24,4 @@ const clearCompletedTask = (TasksList, tasksContainer) => {
     }
   });
 };
-clearCompleted();
+clearCompletedTask();
