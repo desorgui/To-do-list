@@ -1,6 +1,6 @@
 ﻿# To-do-List
 
-> I had to build an interactive list of To Do tasks built using webpack and served by a webpack dev server were the user is able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox)
+>An interactive list of To Do tasks built using webpack and served by a webpack dev server were the user is able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox)
 
 ## Built With
 
